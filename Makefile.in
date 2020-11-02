@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -Wall -Winline -finline-functions -fno-builtin -nostdlib -nostartfiles -nodefaultlibs -nostdinc -O2
+LD = ld
+LDFLAGS = -Ttext 0x100000
+AR = ar
+ARFLAGS = -r
+
+### Environment ###
+TOPLEVEL := /mnt/share/projects/asmodus
+INCLUDEDIR := $(TOPLEVEL)/include
+CFLAGS := $(CFLAGS) -I $(INCLUDEDIR)
